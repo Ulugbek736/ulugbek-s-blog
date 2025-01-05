@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.header--title {
+    background-color: #f8f9fa;
+    padding: 10px 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: #000;
+}
+
+.section-title {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #f1f1f1;
+}
+
+.section-title h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+/* Kichik ekranlar uchun */
+.card-img-top {
+    object-fit: cover;
+    height: 200px; /* Har bir karta uchun rasm balandligi */
+}
+
+/* O'rtacha ekranlar (750px) */
+@media (max-width: 750px) {
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .card-img-top {
+        height: 150px;
+    }
+}
+
+/* Katta ekranlar (1100px va undan yuqori) */
+@media (min-width: 1100px) {
+    .container {
+        max-width: 1100px; /* Sahifani o'rtada saqlash */
+    }
+}
