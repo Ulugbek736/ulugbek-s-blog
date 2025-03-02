@@ -247,3 +247,42 @@ header {
         margin: 0 40px;
     }
 }
+
+img {
+    width: 100%;
+  height: 200px;
+  object-fit: contain;
+}
+.z{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: auto;
+    width: 350px;
+}
+.d{
+     display: flex;
+}
+/* Mobile Screens (750px) */
+@media (max-width: 750px) {
+    .logo-wrapper a {
+        font-size: 1.25rem;
+    }
+
+    .nav-item {
+        margin: 0 10px;
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .z {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
