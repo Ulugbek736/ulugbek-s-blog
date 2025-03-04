@@ -1,47 +1,115 @@
 body {
     font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1a1a1a, #2c2c2c); /* Qoramtir gradient */
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
 }
 
-.header--title {
-    background-color: #f8f9fa;
-    padding: 10px 0;
+/* Navbar */
+.navbar {
+    background: rgba(30, 30, 30, 0.9) !important; /* Qoramtir shaffof navbar */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
-.logo {
+.navbar-brand {
     font-size: 1.5rem;
-    color: #000;
+    font-weight: bold;
+    color: #ffffff !important;
 }
 
+.navbar-nav .nav-link {
+    color: #bbbbbb !important;
+    transition: 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffffff !important;
+}
+
+/* Sarlavha */
 .section-title {
     text-align: center;
-    padding: 40px 0;
-    background-color: #f1f1f1;
+    padding: 50px 0;
+    background: #222; /* Qoramtir fon */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 .section-title h1 {
     font-size: 2.5rem;
     font-weight: bold;
+    color: #ffffff;
 }
-/* Kichik ekranlar uchun */
-.card-img-top {
+
+
+.container {
+    max-width: 1100px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    width: 18rem;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+    background: #292929; /* Qoramtir kartalar */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    color: #e0e0e0;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    height: 200px;
     object-fit: cover;
-    height: 200px; /* Har bir karta uchun rasm balandligi */
 }
 
-/* O'rtacha ekranlar (750px) */
-@media (max-width: 750px) {
+.card-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    text-align: center;
+    color: #6c757d;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #007bff, #6610f2);
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #0056b3, #520dc2);
+}
+
+/* Mobil moslashuv */
+@media (max-width: 1024px) {
     .card {
-        margin-bottom: 20px;
-    }
-
-    .card-img-top {
-        height: 150px;
+        width: calc(50% - 20px); /* 2 ta karta yonma-yon chiqadi */
     }
 }
 
-/* Katta ekranlar (1100px va undan yuqori) */
-@media (min-width: 1100px) {
-    .container {
-        max-width: 1100px; /* Sahifani o'rtada saqlash */
+@media (max-width: 750px) {
+    
+    .card {
+        width: 50%; /* Mobil versiyada kartalar to'liq kenglikda chiqadi */
+    }
+
+    .card img {
+        height: 180px; /* Rasm biroz kichrayadi */
     }
 }
